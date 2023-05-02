@@ -1,11 +1,7 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
+const formatDate = require('../utils/formatDate');
 
 const schemaReactions = new mongoose.Schema({
-    reactionId: {
-        type: mongoose.Schema.Types.ObjectId,
-        default: () => new mongoose.Types.ObjectId()
-    },
-
     reactionBody: {
         type: String,
         required: true,
@@ -18,8 +14,11 @@ const schemaReactions = new mongoose.Schema({
         trim: true
     },
 
-}, {
-    timestamps: { createdAt: 'createdAt'}
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: timestamp => formatDate(timestamp)
+    }
 });
 
-module.exports = schemaReactions;
+module.exports = mongoose.model('Reaction', schemaReactions);
