@@ -5,7 +5,7 @@ const apiRoutes = require('./api');
 router.use('/api', apiRoutes);
 
 router.use((req, res) => {
-    return res.send('Unkown route');
+    return res.send('No route has been matched.');
   }); 
   
 module.exports = router;
