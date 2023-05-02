@@ -1,17 +1,17 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const config = require('config');
+const { connection } = require('./config/connection');
 const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', routes);
 
-mongoose.connect(config.db.url, {
-    
-})
+connection.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+});

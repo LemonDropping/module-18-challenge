@@ -1,10 +1,11 @@
 {
   "name": "module-18-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "## User Story  AS A social media startup I WANT an API for my social network that uses a NoSQL database SO THAT my website can handle large amounts of unstructured data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/LemonDropping/module-18-challenge#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "config": "^3.3.9",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongoose": "^7.1.0"
