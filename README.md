@@ -22,9 +22,8 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ## Installation
 1. Have insomnia and MongoDB Compass is installed on your computer
 2. in your terminal of the project us `npm install express mongoose moment`.
-## Usage
-Video Walkthrough:
 
+## Usage
 - Type npm init -y into terminal to create a new .json file
 - Type npm i into terminal
 - Type npm i express mongoose moment in the terminal
