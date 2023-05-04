@@ -49,7 +49,6 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  //update a thought
   updateThought(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -64,7 +63,6 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  // Create a reaction
   createReaction(req, res) {
     console.log("I've got an opinion on this!");
     Thought.findOneAndUpdate(
